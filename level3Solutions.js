@@ -189,7 +189,29 @@ console.log(data);
 
 // 11. Diviser le tableau en groupes de taille 4
 // boucle + .slice()
+let H = [];
+let size = 4;
+for(let i = 0; i < data.length; i += size){
+    H.push(data.slice(i, i + size));
+}
+console.log(H);
+
 //  double boucle + index
+
+let groups = [];
+let sz = 4;
+
+for(let i = 0; i < data.length; i += sz){       
+    let group = [];                
+    for(let j = i; j < i + sz && j < data.length; j++){
+        group.push(data[j]);     
+    }
+    groups.push(group);            
+}
+
+console.log(groups);
+
+
 
 
 
